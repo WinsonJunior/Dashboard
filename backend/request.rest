@@ -1,0 +1,128 @@
+//Create a user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Winson Jr",
+    "email": "winsonJr@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "user"
+}
+
+
+###
+
+//Get all users
+
+GET http://localhost:5000/users
+
+
+###
+
+//Get single user
+
+GET http://localhost:5000/users/3e72e62d-d43e-4e39-9b8a-fbd8290234a4
+
+
+###
+
+//Update a user
+PATCH http://localhost:5000/users/3e72e62d-d43e-4e39-9b8a-fbd8290234a4
+Content-Type: application/json
+
+{
+    "name": "Winson Jr",
+    "email": "winsonJr@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+###
+
+
+//Delete a user
+DELETE http://localhost:5000/users/3e72e62d-d43e-4e39-9b8a-fbd8290234a4
+
+
+###
+
+
+//Login Admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "123456"
+}
+
+
+###
+
+//Login User
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "WinsonJr@gmail.com",
+    "password": "123456"
+}
+
+###
+
+
+//get me
+GET http://localhost:5000/me
+
+
+###
+
+
+//Logout User
+DELETE http://localhost:5000/logout
+
+
+
+
+###
+
+//Product
+//Get all product
+
+GET http://localhost:5000/products
+
+
+###
+
+//Get one product
+
+GET http://localhost:5000/products/f8b94d16-1467-40c1-82aa-2a999b0633c7
+
+###
+
+//Create a product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Product 6",
+    "price": 700
+}
+
+###
+
+//Update a product
+PATCH http://localhost:5000/products/bb184d22-6188-456a-b6db-2b40c17e81b2
+Content-Type: application/json
+
+{
+    "name": "Product Updated",
+    "price": 1200
+}
+
+###
+
+//Delete a product
+DELETE http://localhost:5000/products/bb184d22-6188-456a-b6db-2b40c17e81b2
